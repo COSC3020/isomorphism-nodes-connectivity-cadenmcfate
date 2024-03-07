@@ -28,4 +28,25 @@ $$
 
 Where $V_A = [a_i]$ for $i = 1...n$ and $V_B = [b_i]$ for $i = 1...n$.
 However, the ordering of the vertices is irrelevent. 
-In fact, there are $n!$ possible bijections that will work, one for each permutation of $V_A$ mapping to $V_B$. So we have certainly met the qualifications of isomorphism for every completely connected pair of graphs with the same number of nodes.
+In fact, there are $n!$ possible bijections that will work, one for each permutation of $V_A$ mapping to $V_B$.
+
+So, let $f$ be one of these bijections. We have the following:
+
+
+$$
+\begin{align}
+  & (u,v) \in E_A \\
+  \Rightarrow & f(u),f(v) \in V_B \quad \text{(f is onto)} \\
+  \Rightarrow & (f(u),f(v)) \in E_B  \quad \text{(B is completely connected)}
+\end{align}
+$$
+
+And the other direction,
+
+$$
+\begin{align}
+  & (f(u),f(v)) \in E_B \\
+  \Rightarrow & u,v \in V_A \quad \text{(f is 1-1)} \\
+  \Rightarrow & (u,v) \in E_A \quad \text{(A is completely connected)}
+\end{align}
+$$
